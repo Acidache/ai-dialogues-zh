@@ -306,6 +306,23 @@
     const filterButtons = document.querySelectorAll(".tag-filter");
     const archiveCount = document.getElementById("archive-count");
     const emptyState = document.getElementById("empty-state");
+    const pageCounts = {
+      "ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/": count01,
+      "ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/": count02,
+      "ai-dialogues-zh/dialogues/2026-07-private-inference-blind-interpreter-control/": count03
+    };
+
+    fetch("assets/discussion-counts.json", { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : null)
+      .then((data) => {
+        if (!data?.byPage) return;
+        Object.entries(pageCounts).forEach(([page, target]) => {
+          if (Object.hasOwn(data.byPage, page)) {
+            target.textContent = `${Number(data.byPage[page] || 0)} 条留言`;
+          }
+        });
+      })
+      .catch(() => {});
 
     window.addEventListener("message", (event) => {
       if (event.origin !== "https://giscus.app") return;

@@ -1,0 +1,92 @@
+name: Update discussion counts
+
+on:
+  discussion:
+    types: [created, edited, deleted]
+  discussion_comment:
+    types: [created, edited, deleted]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+  discussions: read
+
+concurrency:
+  group: discussion-counts
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read discussion totals
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api graphql -f query='
+            query {
+              repository(owner: "Acidache", name: "ai-dialogues-zh") {
+                discussions(first: 100) {
+                  nodes {
+                    title
+                    comments(first: 100) {
+                      totalCount
+                      nodes {
+                        replies { totalCount }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ' > /tmp/discussions.json
+
+      - name: Build public count index
+        run: |
+          node - <<'NODE'
+          const fs = require("fs");
+          const raw = JSON.parse(fs.readFileSync("/tmp/discussions.json", "utf8"));
+          const discussions = raw.data.repository.discussions.nodes;
+          const byTerm = {};
+          const byPage = {};
+
+          for (const discussion of discussions) {
+            const replies = discussion.comments.nodes.reduce(
+              (sum, comment) => sum + Number(comment.replies.totalCount || 0),
+              0
+            );
+            const total = Number(discussion.comments.totalCount || 0) + replies;
+            const term = discussion.title.replace(/^\/+/, "");
+            byTerm[term] = total;
+
+            const page = term.split("::")[0];
+            if (page.startsWith("ai-dialogues-zh/dialogues/")) {
+              byPage[page] = Number(byPage[page] || 0) + total;
+            }
+          }
+
+          const output = {
+            updatedAt: new Date().toISOString(),
+            byTerm,
+            byPage
+          };
+          fs.writeFileSync(
+            "assets/discussion-counts.json",
+            `${JSON.stringify(output, null, 2)}\n`
+          );
+          NODE
+
+      - name: Commit updated totals
+        run: |
+          if git diff --quiet -- assets/discussion-counts.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/discussion-counts.json
+          git commit -m "Update discussion counts"
+          git push
