@@ -26,13 +26,61 @@
   .chat-header-bar {
     background: #2b2b2b;
     color: #fff;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 16px;
+    min-height: 52px;
+    padding: 8px 10px;
     font-weight: 500;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 6px;
+  }
+  .chat-title {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .header-action {
+    min-height: 36px;
+    border: 0;
+    border-radius: 7px;
+    padding: 7px 9px;
+    color: #fff;
+    background: transparent;
+    font: inherit;
+    font-size: 13px;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .header-action:first-child {
+    justify-self: start;
+  }
+  .header-action:last-child {
+    justify-self: end;
+  }
+  .header-action:hover,
+  .header-action:focus-visible {
+    background: rgba(255,255,255,0.13);
+    outline: none;
+  }
+  .reading-progress {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.08);
+  }
+  .reading-progress span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #07c160;
+    transform: scaleX(0);
+    transform-origin: left center;
   }
   .chat-body {
     padding: 12px 12px 30px;
@@ -192,26 +240,113 @@
     border-radius: 10px;
     margin: 2px 3px;
   }
-  .discussion-section {
-    max-width: 720px;
-    margin: 28px auto 56px;
-    padding: 0 18px;
+  .closing-cta {
+    margin: 26px 0 10px;
+    padding: 18px 16px;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.72);
+    text-align: center;
+  }
+  .closing-cta strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #222;
+    font-size: 16px;
+  }
+  .closing-cta p {
+    margin-bottom: 13px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .primary-action {
+    min-height: 42px;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    color: #fff;
+    background: #07a854;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .primary-action:hover {
+    background: #078f49;
+  }
+  .primary-action:focus-visible,
+  .panel-close:focus-visible {
+    outline: 3px solid rgba(7,193,96,0.3);
+    outline-offset: 2px;
+  }
+  body.panel-open {
+    overflow: hidden;
+  }
+  .discussion-panel {
+    width: min(680px, calc(100% - 32px));
+    max-width: none;
+    height: min(86vh, 820px);
+    max-height: none;
+    margin: auto 0 0 auto;
+    padding: 0;
+    border: 0;
+    border-radius: 16px 0 0 0;
+    color: #111;
+    background: #fff;
+    box-shadow: -12px 0 38px rgba(0,0,0,0.18);
+  }
+  .discussion-panel::backdrop {
+    background: rgba(25,27,31,0.46);
+    backdrop-filter: blur(2px);
+  }
+  .panel-shell {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .panel-header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 20px 22px 16px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .panel-kicker {
+    margin-bottom: 3px;
+    color: #078f49;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .panel-header h2 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+  .panel-close {
+    min-width: 54px;
+    min-height: 40px;
+    border: 1px solid #d7d7d7;
+    border-radius: 8px;
+    color: #444;
+    background: #fff;
+    font: inherit;
+    cursor: pointer;
+  }
+  .panel-content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 18px 22px 26px;
   }
   .discussion-card {
-    background: #fff;
-    border: 1px solid #d9d9d9;
-    border-radius: 12px;
-    padding: 24px 20px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
-  }
-  .discussion-card h2 {
-    margin: 0 0 8px;
-    color: #111;
-    font-size: 21px;
-    line-height: 1.35;
+    min-height: 360px;
   }
   .discussion-intro {
-    margin: 0 0 20px;
+    margin: 0 0 16px;
     color: #666;
     font-size: 14px;
     line-height: 1.7;
@@ -225,13 +360,26 @@
   .discussion-note a {
     color: #57606a;
   }
-  @media (max-width: 480px) {
-    .discussion-section {
-      margin-top: 20px;
-      padding: 0 12px;
+  @media (max-width: 560px) {
+    .discussion-panel {
+      width: 100%;
+      height: min(88dvh, 760px);
+      margin: auto 0 0;
+      border-radius: 16px 16px 0 0;
     }
-    .discussion-card {
-      padding: 20px 14px;
+    .panel-header {
+      padding: 17px 16px 14px;
+    }
+    .panel-content {
+      padding: 16px 14px 24px;
+    }
+    .chat-title {
+      font-size: 15px;
+    }
+    .header-action {
+      padding-right: 7px;
+      padding-left: 7px;
+      font-size: 12px;
     }
   }
 </style>
@@ -239,7 +387,12 @@
 <body>
 <div class="phone-frame">
 
-<div class="chat-header-bar">💬 元宝</div>
+<nav class="chat-header-bar" aria-label="对话页面导航">
+  <a class="header-action" href="../../">返回列表</a>
+  <span class="chat-title">💬 元宝</span>
+  <button class="header-action js-open-discussion" type="button">参与讨论</button>
+  <span class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></span>
+</nav>
 
 <div class="chat-body">
 
@@ -578,37 +731,118 @@
   </div>
 </div>
 
+<div class="closing-cta">
+  <strong>读完了？留下你的判断</strong>
+  <p>评论会公开保存在 GitHub Discussions，也可以回复其他读者。</p>
+  <button class="primary-action js-open-discussion" type="button">打开讨论区</button>
+</div>
+
 </div>
 </div>
 
-<section class="discussion-section" aria-labelledby="discussion-title">
-  <div class="discussion-card">
-    <h2 id="discussion-title">继续这场对话</h2>
-    <p class="discussion-intro">你认同哪一部分？哪一个判断值得反驳或补充？欢迎留下观点，也可以回复其他读者。首次留言需要使用 GitHub 账号登录。</p>
-    <script src="https://giscus.app/client.js"
-            data-repo="Acidache/ai-dialogues-zh"
-            data-repo-id="R_kgDOToycww"
-            data-category="General"
-            data-category-id="DIC_kwDOToycw84DCW3P"
-            data-mapping="pathname"
-            data-strict="1"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="top"
-            data-theme="light"
-            data-lang="zh-CN"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
-    </script>
-    <noscript>
-      <p class="discussion-note">需要启用 JavaScript 才能显示评论区。你也可以直接前往
-        <a href="https://github.com/Acidache/ai-dialogues-zh/discussions">GitHub Discussions</a>
-        参与讨论。
-      </p>
-    </noscript>
-    <p class="discussion-note">评论由 <a href="https://giscus.app/zh-CN" rel="noopener noreferrer">giscus</a> 与 GitHub Discussions 提供；登录和评论遵循 GitHub 的隐私政策与社区规则。</p>
+<dialog class="discussion-panel" id="discussion-panel" aria-labelledby="discussion-title">
+  <div class="panel-shell">
+    <header class="panel-header">
+      <div>
+        <div class="panel-kicker">PUBLIC DISCUSSION</div>
+        <h2 id="discussion-title">继续这场对话</h2>
+      </div>
+      <button class="panel-close" id="discussion-close" type="button">关闭</button>
+    </header>
+    <div class="panel-content">
+      <div class="discussion-card">
+        <p class="discussion-intro">你认同哪一部分？哪一个判断值得反驳或补充？欢迎留下观点，也可以回复其他读者。首次留言需要使用 GitHub 账号登录。</p>
+        <script src="https://giscus.app/client.js"
+                data-repo="Acidache/ai-dialogues-zh"
+                data-repo-id="R_kgDOToycww"
+                data-category="General"
+                data-category-id="DIC_kwDOToycw84DCW3P"
+                data-mapping="pathname"
+                data-strict="1"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="light"
+                data-lang="zh-CN"
+                crossorigin="anonymous"
+                async>
+        </script>
+        <noscript>
+          <p class="discussion-note">需要启用 JavaScript 才能显示评论区。你也可以直接前往
+            <a href="https://github.com/Acidache/ai-dialogues-zh/discussions">GitHub Discussions</a>
+            参与讨论。
+          </p>
+        </noscript>
+        <p class="discussion-note">评论由 <a href="https://giscus.app/zh-CN" rel="noopener noreferrer">giscus</a> 与 GitHub Discussions 提供；登录和评论遵循 GitHub 的隐私政策与社区规则。</p>
+      </div>
+    </div>
   </div>
-</section>
+</dialog>
+
+<script>
+  (() => {
+    const panel = document.getElementById("discussion-panel");
+    const closeButton = document.getElementById("discussion-close");
+    const openButtons = document.querySelectorAll(".js-open-discussion");
+    const progressBar = document.getElementById("reading-progress-bar");
+    const discussionHashes = new Set(["#discussion", "#discussion-title"]);
+
+    const openDiscussion = (updateHistory = true) => {
+      if (!panel.open) {
+        panel.showModal();
+        document.body.classList.add("panel-open");
+      }
+      if (updateHistory && window.location.hash !== "#discussion") {
+        window.history.pushState({ discussionOpen: true }, "", "#discussion");
+      }
+      window.setTimeout(() => closeButton.focus(), 0);
+    };
+
+    const closeDiscussion = (updateHistory = true) => {
+      if (panel.open) {
+        panel.close();
+        document.body.classList.remove("panel-open");
+      }
+      if (updateHistory && discussionHashes.has(window.location.hash)) {
+        window.history.back();
+      }
+    };
+
+    openButtons.forEach((button) => {
+      button.addEventListener("click", () => openDiscussion(true));
+    });
+    closeButton.addEventListener("click", () => closeDiscussion(true));
+    panel.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      closeDiscussion(true);
+    });
+    panel.addEventListener("click", (event) => {
+      if (event.target === panel) closeDiscussion(true);
+    });
+    window.addEventListener("popstate", () => {
+      if (discussionHashes.has(window.location.hash)) {
+        openDiscussion(false);
+      } else {
+        closeDiscussion(false);
+      }
+    });
+
+    const updateProgress = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+      progressBar.style.transform = `scaleX(${progress})`;
+    };
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+    updateProgress();
+
+    if (discussionHashes.has(window.location.hash)) {
+      const baseUrl = `${window.location.pathname}${window.location.search}`;
+      window.history.replaceState({ discussionBase: true }, "", baseUrl);
+      window.history.pushState({ discussionOpen: true }, "", "#discussion");
+      openDiscussion(false);
+    }
+  })();
+</script>
 </body>
 </html>

@@ -50,7 +50,7 @@
 
 ## 交流与评论
 
-每篇对话页面底部嵌入由 [giscus](https://giscus.app/zh-CN) 提供的评论区，评论保存在本仓库的 GitHub Discussions 中。读者可以查看留言和回复；发表内容时需要使用 GitHub 账号登录并授权 giscus 代表本人提交评论。
+每篇对话页面提供随时可打开的讨论面板，由 [giscus](https://giscus.app/zh-CN) 提供评论能力，评论保存在本仓库的 GitHub Discussions 中。读者可以查看留言和回复；发表内容时需要使用 GitHub 账号登录并授权 giscus 代表本人提交评论。
 
 评论区会加载来自 `giscus.app` 的脚本，不含广告。禁用 JavaScript 时仍可通过仓库的 [Discussions 页面](https://github.com/Acidache/ai-dialogues-zh/discussions)参与讨论。
 
