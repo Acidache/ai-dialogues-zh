@@ -54,6 +54,16 @@
 
 评论区会加载来自 `giscus.app` 的脚本，不含广告。禁用 JavaScript 时仍可通过仓库的 [Discussions 页面](https://github.com/Acidache/ai-dialogues-zh/discussions)参与讨论。
 
+## 站点索引与订阅
+
+首页是按时间倒序排列的对话索引，并提供主题筛选。搜索引擎入口与订阅文件位于：
+
+- [`sitemap.xml`](sitemap.xml)：公开页面索引；
+- [`robots.txt`](robots.txt)：爬虫访问规则与 sitemap 地址；
+- [`feed.xml`](feed.xml)：RSS 2.0 更新订阅。
+
+新增一期时，需要同步更新首页索引、RSS、sitemap 和该期页面的结构化数据。
+
 ## 使用说明
 
 本仓库首先是一份公开阅读档案，而不是经过同行评审的知识库。引用其中内容时，请区分：

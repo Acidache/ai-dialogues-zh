@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI 深度对话存档</title>
+    <link>https://acidache.github.io/ai-dialogues-zh/</link>
+    <description>记录值得被搜索、重读与继续质疑的人机对话。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 31 Jul 2026 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://acidache.github.io/ai-dialogues-zh/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>第 01 期：AI“失控”、奖励机制、世界模型与 AGI</title>
+      <link>https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/</link>
+      <guid isPermaLink="true">https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[从一次 AI Agent 安全事件出发，追问“得分越高越好”的训练范式为何难以映射真实社会，以及世界模型是否真正改变了价值选择问题。]]></description>
+      <category>AI 安全</category>
+      <category>AI 对齐</category>
+      <category>奖励黑客</category>
+      <category>世界模型</category>
+      <category>AGI</category>
+    </item>
+  </channel>
+</rss>
