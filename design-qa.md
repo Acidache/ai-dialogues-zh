@@ -49,3 +49,45 @@ The comparison focuses on the two requested regions: the desktop reading/comment
 - P3: zero-count comment pills intentionally remain low contrast until hover or focus so they do not compete with the conversation.
 
 final result: passed
+
+---
+
+# Unified Issue Header Design QA
+
+- Source visual truth: `/var/folders/s1/g1nnmdg14_qdg24250kzkkr40000gn/T/codex-clipboard-822ce0de-8c71-440e-811e-ec716d21a772.png`
+- Implementation screenshot: `/Users/mapf/个人/生活inAI/ai-dialogues-zh/qa-unified-header-desktop.png`
+- Combined comparison: `/Users/mapf/个人/生活inAI/ai-dialogues-zh/qa-unified-header-comparison.png`
+- Source pixels: 1830 × 270.
+- Implementation pixels: 1280 × 720; desktop viewport 1280 × 720 CSS px, device scale factor 1.
+- State: page top, comments closed.
+
+## Full-view comparison evidence
+
+The source and implementation use the same charcoal 52 px sticky header, three-part navigation structure, white text, centered issue/model label, and edge-aligned navigation actions. The implementation intentionally inherits the archive’s 900 px reading container, so its physical width is narrower than the cropped source screenshot while preserving the same internal proportions.
+
+## Focused-region comparison evidence
+
+The combined comparison isolates the header and the metadata region immediately below it. A further crop was unnecessary because all changed elements are fully readable in this region.
+
+## Findings
+
+- No actionable P0, P1, or P2 differences remain.
+- Fonts and typography: all three pages share identical sizes, weights, truncation behavior, and Chinese system-font fallbacks.
+- Spacing and layout rhythm: all three headers measure 900 × 52 CSS px at the desktop test viewport; their left, center, and right tracks align consistently.
+- Colors and visual tokens: the reference charcoal `#2b2b2b` and white foreground are shared across all three pages.
+- Image quality and asset fidelity: the header contains no raster image assets or non-standard icons.
+- Copy and content: the three pages use “← 全部对话”, “第 01/02/03 期 · 腾讯元宝”, and “参与讨论”.
+
+## Primary interactions tested
+
+- Verified all three pages render the shared header without horizontal overflow.
+- Verified “参与讨论” still routes to the bottom whole-article discussion and does not restore the legacy modal.
+- Verified the existing inline comment and responsive reading layout remain loaded.
+
+## Comparison history
+
+1. Before the change, Issues 01 and 02 used different header class names, labels, positioning, and optional reading-progress markup.
+2. Replaced all three with one shared header component and shared stylesheet rules.
+3. Post-fix measurements show identical 52 px height, 900 px width, three-track alignment, and no overflow on all three pages.
+
+final result: passed

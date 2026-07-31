@@ -551,12 +551,11 @@
 </head>
 <body>
 <div class="phone">
-  <nav class="header" aria-label="对话页面导航">
-    <a class="header-action" href="../../">返回列表</a>
-    <div class="header-title">腾讯元宝</div>
-    <button class="header-action js-open-discussion" type="button">参与讨论</button>
-    <span class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></span>
-  </nav>
+  <header class="archive-site-header" aria-label="对话页面导航">
+    <a href="../../" aria-label="返回全部对话">← 全部对话</a>
+    <span class="archive-site-header-title">第 02 期 · 腾讯元宝</span>
+    <a class="js-open-discussion" href="#discussion">参与讨论</a>
+  </header>
   <div class="chat-body" id="chatBody">
 
     <section class="dialogue-meta" aria-label="本期对话元数据">
@@ -1049,6 +1048,7 @@
     });
 
     const updateProgress = () => {
+      if (!progressBar) return;
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
       const progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
       progressBar.style.transform = `scaleX(${progress})`;
