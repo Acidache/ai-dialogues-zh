@@ -67,7 +67,11 @@
     .issue-title { margin:10px 0 9px; font-size:25px; line-height:1.35; letter-spacing:-.01em; }
     .issue-title a { text-decoration:none; }
     .issue-title a:hover { color:var(--accent-dark); }
-    .issue-summary { margin:0; color:#515151; }
+    .issue-cover-link { display:block; margin-top:14px; border-radius:10px; overflow:hidden; background:#e5e5e5; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+    .issue-cover-link img { display:block; width:100%; height:auto; aspect-ratio:1.75/1; object-fit:cover; transition:transform .2s ease; }
+    .issue-cover-link:hover img { transform:scale(1.008); }
+    .issue-summary { margin:14px 0 0; color:#515151; }
+    .visually-hidden { position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; overflow:hidden !important; clip:rect(0,0,0,0) !important; white-space:nowrap !important; border:0 !important; }
     .issue-tags { display:flex; flex-wrap:wrap; gap:7px; margin:18px 0 20px; }
     .issue-tags span { padding:4px 9px; border-radius:999px; color:#59615d; background:#f1f3f2; font-size:12px; }
     .issue-actions { display:flex; flex-wrap:wrap; align-items:center; gap:11px; }
@@ -180,7 +184,10 @@
           <span>第 01 期 · 2026 年 7 月 · 腾讯元宝</span>
           <span class="discussion-count" id="discussion-count-01" aria-live="polite">0 条留言</span>
         </div>
-        <h3 class="issue-title"><a href="dialogues/2026-07-30-ai-control-world-model-agi/">AI 为什么会失控？</a></h3>
+        <a class="issue-cover-link" href="dialogues/2026-07-30-ai-control-world-model-agi/" aria-label="阅读第 01 期：AI 为什么会失控？">
+          <img src="assets/issue-01-social-card-v2.png" alt="第 01 期封面：AI 为什么会失控？" width="1659" height="948">
+        </a>
+        <h3 class="issue-title visually-hidden">AI 为什么会失控？</h3>
         <p class="issue-summary">从一次 AI Agent 安全事件出发，追问“得分越高越好”的训练范式为何难以映射真实社会，以及世界模型是否真正改变了价值选择问题。</p>
         <div class="issue-tags" aria-label="主题标签">
           <span>AI 安全</span><span>技术与社会</span>
@@ -196,7 +203,10 @@
           <span>第 02 期 · 2026 年 4 月 · 腾讯元宝</span>
           <span class="discussion-count" id="discussion-count-02" aria-live="polite">0 条留言</span>
         </div>
-        <h3 class="issue-title"><a href="dialogues/2026-04-ai-agent-identity-memory-continuity/">换了大模型，它还是原来的 AI Agent 吗？</a></h3>
+        <a class="issue-cover-link" href="dialogues/2026-04-ai-agent-identity-memory-continuity/" aria-label="阅读第 02 期：换了大模型，它还是原来的 AI Agent 吗？">
+          <img src="assets/issue-02-social-card-v2.png" alt="第 02 期封面：换了大模型，它还是原来的 AI Agent 吗？" width="1660" height="948" loading="lazy">
+        </a>
+        <h3 class="issue-title visually-hidden">换了大模型，它还是原来的 AI Agent 吗？</h3>
         <p class="issue-summary">从更换底层模型后的违和感出发，讨论人格文件、记忆连续性、模型载体、关系权力，以及我们该如何面对可能被复制和迁移的数字伙伴。</p>
         <div class="issue-tags" aria-label="主题标签">
           <span>AI 身份</span><span>人机关系</span>
@@ -212,7 +222,10 @@
           <span>第 03 期 · 2026 年 7 月 · 腾讯元宝</span>
           <span class="discussion-count" id="discussion-count-03" aria-live="polite">0 条留言</span>
         </div>
-        <h3 class="issue-title"><a href="dialogues/2026-07-private-inference-blind-interpreter-control/">密码学能让 AI 更安全吗？</a></h3>
+        <a class="issue-cover-link" href="dialogues/2026-07-private-inference-blind-interpreter-control/" aria-label="阅读第 03 期：密码学能让 AI 更安全吗？">
+          <img src="assets/issue-03-social-card-v3.png" alt="第 03 期封面：密码学能让 AI 更安全吗？" width="1659" height="948" loading="lazy">
+        </a>
+        <h3 class="issue-title visually-hidden">密码学能让 AI 更安全吗？</h3>
         <p class="issue-summary">从“让在线大模型干活，却不看见真实 Prompt”的设想出发，讨论 FHE、TEE、动态 IR 与盲译官协议，最终转向更根本的问题：当保密可能失效时，能否限制 AI 将知识用于现实行动。</p>
         <div class="issue-tags" aria-label="主题标签">
           <span>AI 安全</span><span>技术与社会</span>
