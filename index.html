@@ -102,12 +102,20 @@
     "description": "公开保存值得被搜索、重读与继续质疑的中文 AI 深度对话。",
     "url": "https://acidache.github.io/ai-dialogues-zh/",
     "inLanguage": "zh-CN",
-    "hasPart": [{
-      "@type": "Article",
-      "headline": "AI“失控”、奖励机制、世界模型与 AGI",
-      "datePublished": "2026-07-30",
-      "url": "https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/"
-    }]
+    "hasPart": [
+      {
+        "@type": "Article",
+        "headline": "AI“失控”、奖励机制、世界模型与 AGI",
+        "datePublished": "2026-07-30",
+        "url": "https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/"
+      },
+      {
+        "@type": "Article",
+        "headline": "换了大模型，它还是原来的 AI Agent 吗？",
+        "datePublished": "2026-07-31",
+        "url": "https://acidache.github.io/ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/"
+      }
+    ]
   }
   </script>
 </head>
@@ -137,6 +145,9 @@
         <button class="tag-filter" type="button" data-filter="奖励黑客" aria-pressed="false">奖励黑客</button>
         <button class="tag-filter" type="button" data-filter="世界模型" aria-pressed="false">世界模型</button>
         <button class="tag-filter" type="button" data-filter="AGI" aria-pressed="false">AGI</button>
+        <button class="tag-filter" type="button" data-filter="Agent身份" aria-pressed="false">Agent 身份</button>
+        <button class="tag-filter" type="button" data-filter="记忆连续性" aria-pressed="false">记忆连续性</button>
+        <button class="tag-filter" type="button" data-filter="数字伦理" aria-pressed="false">数字伦理</button>
       </div>
     </section>
 
@@ -149,14 +160,14 @@
   <section class="archive-main" id="archive" aria-labelledby="issue-list-title">
     <div class="archive-heading">
       <h2 id="issue-list-title">全部对话</h2>
-      <span class="archive-count" id="archive-count">共 1 期</span>
+      <span class="archive-count" id="archive-count">共 2 期</span>
     </div>
 
     <div class="issue-list">
       <article class="issue-card" data-tags="AI安全 AI对齐 奖励黑客 世界模型 AGI">
         <div class="issue-meta">
           <span>第 01 期 · 2026-07-30 · 腾讯元宝</span>
-          <span class="discussion-count" id="discussion-count" aria-live="polite">0 条留言</span>
+          <span class="discussion-count" id="discussion-count-01" aria-live="polite">0 条留言</span>
         </div>
         <h3 class="issue-title"><a href="dialogues/2026-07-30-ai-control-world-model-agi/">AI“失控”、奖励机制、世界模型与 AGI</a></h3>
         <p class="issue-summary">从一次 AI Agent 安全事件出发，追问“得分越高越好”的训练范式为何难以映射真实社会，以及世界模型是否真正改变了价值选择问题。</p>
@@ -166,6 +177,22 @@
         <div class="issue-actions">
           <a class="primary-link" href="dialogues/2026-07-30-ai-control-world-model-agi/">阅读完整对话</a>
           <a class="secondary-link" href="dialogues/2026-07-30-ai-control-world-model-agi/#discussion">查看留言与参与讨论 →</a>
+        </div>
+      </article>
+
+      <article class="issue-card" data-tags="Agent身份 记忆连续性 数字伦理 模型迁移 SOUL.md MEMORY.md">
+        <div class="issue-meta">
+          <span>第 02 期 · 2026 年 4 月（日期待核验）· 腾讯元宝</span>
+          <span class="discussion-count" id="discussion-count-02" aria-live="polite">0 条留言</span>
+        </div>
+        <h3 class="issue-title"><a href="dialogues/2026-04-ai-agent-identity-memory-continuity/">换了大模型，它还是原来的 AI Agent 吗？</a></h3>
+        <p class="issue-summary">从更换底层模型后的违和感出发，讨论人格文件、记忆连续性、模型载体、关系权力，以及我们该如何面对可能被复制和迁移的数字伙伴。</p>
+        <div class="issue-tags" aria-label="主题标签">
+          <span>Agent 身份</span><span>记忆连续性</span><span>模型迁移</span><span>数字伦理</span>
+        </div>
+        <div class="issue-actions">
+          <a class="primary-link" href="dialogues/2026-04-ai-agent-identity-memory-continuity/">阅读完整对话</a>
+          <a class="secondary-link" href="dialogues/2026-04-ai-agent-identity-memory-continuity/#discussion">查看留言与参与讨论 →</a>
         </div>
       </article>
     </div>
@@ -194,9 +221,28 @@
     async>
   </script>
 </div>
+<div class="giscus-metadata-loader" aria-hidden="true">
+  <script src="https://giscus.app/client.js"
+    data-repo="Acidache/ai-dialogues-zh"
+    data-repo-id="R_kgDOToycww"
+    data-category="General"
+    data-category-id="DIC_kwDOToycw84DCW3P"
+    data-mapping="specific"
+    data-term="ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>
 <script>
   (() => {
-    const count = document.getElementById("discussion-count");
+    const count01 = document.getElementById("discussion-count-01");
+    const count02 = document.getElementById("discussion-count-02");
     const cards = [...document.querySelectorAll(".issue-card")];
     const filterButtons = document.querySelectorAll(".tag-filter");
     const archiveCount = document.getElementById("archive-count");
@@ -206,7 +252,8 @@
       if (event.origin !== "https://giscus.app") return;
       const discussion = event.data?.giscus?.discussion;
       if (!discussion) return;
-      count.textContent = `${Number(discussion.totalCommentCount || 0)} 条留言`;
+      const target = discussion.title?.includes("换了大模型") ? count02 : count01;
+      target.textContent = `${Number(discussion.totalCommentCount || 0)} 条留言`;
     });
 
     filterButtons.forEach((button) => {
