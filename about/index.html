@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="关于 Maxon's AI Dialogue Archive：为什么保存人与 AI 的深度对话、收录标准、编辑原则、模型版本与事实核验说明。">
+  <link rel="canonical" href="https://acidache.github.io/ai-dialogues-zh/about/">
+  <link rel="alternate" type="application/rss+xml" title="AI 深度对话存档 RSS" href="https://acidache.github.io/ai-dialogues-zh/feed.xml">
+  <meta property="og:title" content="关于本站｜Maxon's AI Dialogue Archive">
+  <meta property="og:description" content="这些对话不是搜索结果，而是一次性的、不可复现的思想实验。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://acidache.github.io/ai-dialogues-zh/about/">
+  <meta property="og:site_name" content="AI 深度对话存档">
+  <meta property="og:image" content="https://acidache.github.io/ai-dialogues-zh/assets/archive-social-card.png">
+  <meta property="og:image:alt" content="AI 深度对话存档">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="关于本站｜Maxon's AI Dialogue Archive">
+  <meta name="twitter:description" content="这些对话不是搜索结果，而是一次性的、不可复现的思想实验。">
+  <meta name="twitter:image" content="https://acidache.github.io/ai-dialogues-zh/assets/archive-social-card.png">
+  <title>关于本站｜Maxon's AI Dialogue Archive</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page:#ededed;
+      --surface:#fff;
+      --ink:#191919;
+      --muted:#6f6f6f;
+      --line:#d9d9d9;
+      --header:#2b2b2b;
+      --accent:#07a854;
+      --accent-dark:#078f49;
+      --accent-soft:#e8f7ee;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; min-width:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; color:var(--ink); background:var(--page); line-height:1.8; }
+    .site-bar { min-height:52px; display:flex; align-items:center; background:var(--header); color:#fff; }
+    .site-bar-inner { width:min(880px,100%); margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .site-name { color:#fff; font-size:15px; font-weight:650; text-decoration:none; }
+    .site-nav { display:flex; gap:18px; font-size:13px; }
+    .site-nav a { color:#d8d8d8; text-decoration:none; }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color:#fff; }
+    main { width:min(760px,calc(100% - 48px)); margin:0 auto; padding:54px 0 84px; }
+    .eyebrow { color:var(--accent-dark); font-size:12px; font-weight:750; letter-spacing:.08em; }
+    h1 { margin:8px 0 14px; font-size:clamp(34px,6vw,52px); line-height:1.15; letter-spacing:-.025em; }
+    .intro { margin:0 0 34px; color:#575757; font-size:17px; }
+    .about-card { padding:34px 38px; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:0 5px 18px rgba(0,0,0,.05); }
+    section + section { margin-top:36px; padding-top:30px; border-top:1px solid #e5e5e5; }
+    h2 { margin:0 0 12px; font-size:22px; line-height:1.4; }
+    p { margin:0; }
+    p + p { margin-top:13px; }
+    ul { margin:13px 0 0; padding-left:1.25em; }
+    li + li { margin-top:7px; }
+    strong { font-weight:700; }
+    .principle {
+      margin-top:18px;
+      padding:14px 16px;
+      border-left:3px solid var(--accent);
+      border-radius:0 8px 8px 0;
+      color:#435149;
+      background:var(--accent-soft);
+    }
+    .contact-list a { color:var(--accent-dark); }
+    .closing {
+      color:#3f4d45;
+      font-size:17px;
+    }
+    .page-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; }
+    .primary-link { display:inline-block; padding:9px 16px; border-radius:8px; color:#fff; background:var(--accent); font-weight:700; text-decoration:none; }
+    .primary-link:hover { background:var(--accent-dark); }
+    .secondary-link { display:inline-block; padding:9px 14px; color:var(--accent-dark); font-weight:700; text-decoration:none; }
+    .secondary-link:hover { text-decoration:underline; }
+    footer { width:min(760px,calc(100% - 48px)); margin:0 auto 34px; padding-top:20px; border-top:1px solid #d2d2d2; color:#858585; font-size:12px; text-align:center; }
+    footer a { color:#626b66; }
+    a:focus-visible { outline:3px solid rgba(7,193,96,.3); outline-offset:3px; }
+    @media (max-width:600px) {
+      .site-bar-inner { padding:0 16px; }
+      .site-nav a:first-child { display:none; }
+      main { width:calc(100% - 32px); padding:36px 0 62px; }
+      .intro { font-size:16px; }
+      .about-card { padding:24px 19px; }
+      section + section { margin-top:30px; padding-top:25px; }
+      h2 { font-size:20px; }
+      footer { width:calc(100% - 32px); }
+    }
+  </style>
+</head>
+<body>
+<header class="site-bar">
+  <div class="site-bar-inner">
+    <a class="site-name" href="../">AI 深度对话存档</a>
+    <nav class="site-nav" aria-label="站点导航">
+      <a href="../">全部对话</a>
+      <a href="./" aria-current="page">关于本站</a>
+      <a href="../feed.xml">RSS 订阅</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">ABOUT THE ARCHIVE</div>
+  <h1>关于本站</h1>
+  <p class="intro">关于为什么保存这些对话、如何选择，以及阅读时应当保留哪些边界。</p>
+
+  <article class="about-card">
+    <section aria-labelledby="what-title">
+      <h2 id="what-title">这个站在做什么</h2>
+      <p>这里是 <strong>Maxon's AI Dialogue Archive</strong>（我的 AI 对话存档）。</p>
+      <p>我在 2026 年开始意识到一件事：我与 AI 模型之间的深度对话，正在成为我认知结构中不可忽视的一部分。它们不是“搜索结果”，也不是“聊天记录”——它们是<strong>一次性的、不可复现的思想实验</strong>。虽然或许有些晚，但这些对话中的表达和想法，我觉得确实有意义和有启发的。</p>
+      <p>我不想让它们散落在聊天记录里，被刷新冲走。所以我建了这个站，打算陆陆续续将已经发生对话，和后续新的对话发表出来，也算是一个记忆点的存档。</p>
+    </section>
+
+    <section aria-labelledby="criteria-title">
+      <h2 id="criteria-title">收录标准</h2>
+      <p>对我而言，有启发、有价值即可。很难精确描述标准，但大致是如下：</p>
+      <ul>
+        <li><strong>有深度追问</strong>：不止一问一答，而是形成了思想递进</li>
+        <li><strong>有认知碰撞</strong>：AI 的回答与我的预设产生了冲突，或暴露了我没想过的视角</li>
+        <li><strong>有存档价值</strong>：五年后回头看，依然值得被重新审视</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="editor-title">
+      <h2 id="editor-title">编者</h2>
+      <p>我是 <strong>Maxon</strong>。</p>
+      <p>我不是 AI 研究者，也不是科技从业者。我是一个普通的 AI 使用者——一个把 AI 当成思维脚手架的人。</p>
+      <p>这里的每一期对话，都由我亲手筛选、编号、发布。我不做二次编辑，只做选择和存档。</p>
+    </section>
+
+    <section aria-labelledby="answers-title">
+      <h2 id="answers-title">关于 AI 回答的说明</h2>
+      <p>本站收录的 AI 回答，<strong>不代表已验证的事实，也不代表学术共识</strong>。</p>
+      <p>AI 模型存在以下已知局限：</p>
+      <ul>
+        <li>可能编造事实（幻觉）</li>
+        <li>可能过度自信地给出错误解释</li>
+        <li>可能反映训练数据中的偏见</li>
+        <li>不同模型、不同版本的回答可能相互矛盾</li>
+      </ul>
+      <p class="principle">我在每期对话末尾的「编者注」中，会标注我事后发现的偏差或过时信息。但我的标注也是有限的，欢迎读者通过留言补充指正。</p>
+    </section>
+
+    <section aria-labelledby="models-title">
+      <h2 id="models-title">关于模型版本</h2>
+      <p>AI 模型迭代极快。今天的回答，半年后可能已被新版本取代。</p>
+      <p>因此，本站每期对话仅代表<strong>当时、该模型、该提问方式下的回答</strong>。换了时间、模型或提问角度，结果可能完全不同。如需引用，请务必注明对话日期和模型名称。</p>
+    </section>
+
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">联系方式 / 讨论</h2>
+      <ul class="contact-list">
+        <li>每期页面底部有留言区（基于 GitHub Discussions）</li>
+        <li>你也可以通过 <a href="https://github.com/Acidache/ai-dialogues-zh/issues">GitHub Issues</a> 提交勘误或建议</li>
+        <li>如果你想转载某期对话，请保留完整的免责声明和编者注</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="last-title">
+      <h2 id="last-title">最后</h2>
+      <p class="closing">这个站是一个人的业余项目。更新频率不定，但不会消失。</p>
+      <p class="closing">如果你在这里读到过让你停下来想了一会儿的东西，那就是它存在的意义。</p>
+    </section>
+
+    <div class="page-actions">
+      <a class="primary-link" href="../">返回全部对话</a>
+      <a class="secondary-link" href="../feed.xml">订阅 RSS →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <a href="../">全部对话</a> · <a href="./">关于本站</a> · <a href="../feed.xml">RSS</a>
+</footer>
+</body>
+</html>
