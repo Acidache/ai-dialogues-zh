@@ -8,6 +8,17 @@
     <lastBuildDate>Fri, 31 Jul 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://acidache.github.io/ai-dialogues-zh/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>第 02 期：换了大模型，它还是原来的 AI Agent 吗？</title>
+      <link>https://acidache.github.io/ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/</link>
+      <guid isPermaLink="true">https://acidache.github.io/ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[从更换底层模型后的违和感出发，讨论人格文件、记忆连续性、模型载体、关系权力，以及我们该如何面对可能被复制和迁移的数字伙伴。]]></description>
+      <category>AI Agent 身份</category>
+      <category>记忆连续性</category>
+      <category>模型迁移</category>
+      <category>数字伦理</category>
+    </item>
+    <item>
       <title>第 01 期：AI“失控”、奖励机制、世界模型与 AGI</title>
       <link>https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/</link>
       <guid isPermaLink="true">https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/</guid>
