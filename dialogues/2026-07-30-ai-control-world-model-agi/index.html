@@ -5,10 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="与腾讯元宝关于 AI 失控、奖励机制、世界模型、AI 对齐与 AGI 技术路线的中文深度对话实录。">
 <meta name="keywords" content="AI失控,AI安全,AI对齐,奖励黑客,世界模型,AGI,腾讯元宝,AI对话">
+<link rel="canonical" href="https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/">
+<link rel="alternate" type="application/rss+xml" title="AI 深度对话存档 RSS" href="https://acidache.github.io/ai-dialogues-zh/feed.xml">
 <meta property="og:title" content="AI深度对话：世界模型与AGI">
 <meta property="og:description" content="从 AI Agent 安全事件出发，讨论奖励机制、世界模型与 AGI 路线的局限。">
 <meta property="og:type" content="article">
+<meta property="og:url" content="https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/">
+<meta property="og:site_name" content="AI 深度对话存档">
+<meta property="og:image" content="https://acidache.github.io/ai-dialogues-zh/assets/issue-01-social-card.png">
+<meta property="og:image:alt" content="第 01 期：AI 失控、奖励机制、世界模型与 AGI">
+<meta property="article:published_time" content="2026-07-30T00:00:00+08:00">
+<meta property="article:modified_time" content="2026-07-31T00:00:00+08:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI深度对话：世界模型与AGI">
+<meta name="twitter:description" content="从 AI Agent 安全事件出发，讨论奖励机制、世界模型与 AGI 路线的局限。">
+<meta name="twitter:image" content="https://acidache.github.io/ai-dialogues-zh/assets/issue-01-social-card.png">
 <title>AI深度对话：世界模型与AGI</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI“失控”、奖励机制、世界模型与 AGI",
+  "description": "与腾讯元宝关于 AI 失控、奖励机制、世界模型、AI 对齐与 AGI 技术路线的中文深度对话实录。",
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-07-31",
+  "inLanguage": "zh-CN",
+  "image": "https://acidache.github.io/ai-dialogues-zh/assets/issue-01-social-card.png",
+  "mainEntityOfPage": "https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/",
+  "author": {
+    "@type": "Person",
+    "name": "存档者"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI 深度对话存档"
+  },
+  "keywords": ["AI安全", "AI对齐", "奖励黑客", "世界模型", "AGI", "腾讯元宝"]
+}
+</script>
 <style>
   :root {
     color-scheme: light;
@@ -30,11 +64,13 @@
     padding: 0;
   }
   .phone-frame {
+    width: 100%;
     max-width: 420px;
     margin: 0 auto;
     background: var(--page);
     min-height: 100vh;
     position: relative;
+    overflow-x: clip;
   }
   .chat-header-bar {
     background: var(--header);
@@ -98,6 +134,23 @@
   .chat-body {
     padding: 12px 12px 30px;
   }
+  .dialogue-meta {
+    margin: 4px 0 16px;
+    padding: 12px 13px;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+    color: #696969;
+    background: rgba(255,255,255,0.58);
+    font-size: 11.5px;
+    line-height: 1.65;
+  }
+  .dialogue-meta p + p {
+    margin-top: 3px;
+  }
+  .dialogue-meta strong {
+    color: #414141;
+    font-weight: 650;
+  }
   .timestamp {
     text-align: center;
     color: #b2b2b2;
@@ -155,6 +208,7 @@
     word-break: break-word;
     white-space: pre-wrap;
     position: relative;
+    overflow-wrap: anywhere;
   }
   .message-row.user .bubble {
     background: #95ec69;
@@ -190,6 +244,7 @@
     margin: 6px 0;
     font-size: 12.5px;
     width: 100%;
+    min-width: 310px;
   }
   .bubble th, .bubble td {
     border: 1px solid #ddd;
@@ -252,6 +307,64 @@
     padding: 2px 8px;
     border-radius: 10px;
     margin: 2px 3px;
+  }
+  .archive-notes {
+    margin: 24px 0 12px;
+  }
+  .archive-notes > h2 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 15px;
+    text-align: left;
+  }
+  .archive-notes details {
+    margin-top: 8px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.7);
+  }
+  .archive-notes summary {
+    min-height: 44px;
+    padding: 11px 13px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+  }
+  .archive-notes summary::marker {
+    color: var(--accent-dark);
+  }
+  .note-body {
+    padding: 0 13px 14px;
+    color: #555;
+    font-size: 12.5px;
+    line-height: 1.75;
+  }
+  .note-body p + p,
+  .note-body ul + p,
+  .note-body p + ul {
+    margin-top: 9px;
+  }
+  .note-body ul {
+    margin-left: 18px;
+  }
+  .note-body li + li {
+    margin-top: 5px;
+  }
+  .note-label {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 1px 6px;
+    border-radius: 999px;
+    color: var(--accent-dark);
+    background: var(--accent-soft);
+    font-size: 10.5px;
+    font-weight: 700;
+    vertical-align: 1px;
+  }
+  .note-body a {
+    color: var(--accent-dark);
+    overflow-wrap: anywhere;
   }
   .closing-cta {
     margin: 26px 0 10px;
@@ -384,7 +497,7 @@
       padding: 17px 16px 14px;
     }
     .panel-content {
-      padding: 16px 14px 24px;
+      padding: 16px 14px calc(24px + env(safe-area-inset-bottom));
     }
     .chat-title {
       font-size: 15px;
@@ -393,6 +506,38 @@
       padding-right: 7px;
       padding-left: 7px;
       font-size: 12px;
+    }
+    .bubble-wrapper {
+      max-width: calc(100% - 48px);
+    }
+    .bubble {
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .dialogue-meta {
+      margin-top: 2px;
+      padding: 11px 12px;
+    }
+    .archive-notes summary {
+      min-height: 46px;
+    }
+  }
+  @media (max-width: 360px) {
+    .chat-header-bar {
+      padding-right: 6px;
+      padding-left: 6px;
+      gap: 2px;
+    }
+    .chat-title {
+      font-size: 14px;
+    }
+    .header-action {
+      font-size: 11px;
+    }
+    .chat-body {
+      padding-right: 8px;
+      padding-left: 8px;
     }
   }
 </style>
@@ -408,6 +553,13 @@
 </nav>
 
 <div class="chat-body">
+
+<section class="dialogue-meta" aria-label="本期对话元数据">
+  <p><strong>期号：</strong>01 ｜ <strong>日期：</strong>2026-07-30</p>
+  <p><strong>对手：</strong>腾讯元宝（混元 + DeepSeek 路由）</p>
+  <p><strong>主题：</strong>AI Agent 安全事件 → 得分机制 → 世界模型 → AGI 路线反思</p>
+  <p><strong>存档说明：</strong>保留实质讨论原文；AI 表述可能包含错误、简化或推测，请读者自行核验。</p>
+</section>
 
 <div class="timestamp">2026年7月30日</div>
 
@@ -731,6 +883,41 @@
 </div>
 
 <div class="divider"><span>···</span></div>
+
+<section class="archive-notes" aria-labelledby="archive-notes-title">
+  <h2 id="archive-notes-title">存档者补充</h2>
+
+  <details>
+    <summary>编者后记（存档者）</summary>
+    <div class="note-body">
+      <p>这场讨论真正值得留下的，不是“AI 是否觉醒”这个新闻式问题，而是后面那个更基础的追问：我们为什么要把智能训练压缩成一个可以不断得高分的过程，而它最终面对的却是多方利益、长期后果和模糊责任组成的现实社会？</p>
+      <p>我的当前判断是：世界模型可以让 AI 在行动之前推演更多后果，但它不会自动产生正确的价值选择。只要最后仍需要把复杂现实压缩为某个可优化目标，奖励被钻空子的问题就可能从“分数”转移到评价器、模拟环境或价值函数本身。真正的安全不能只靠模型变聪明，还必须同时约束目标、权限、环境、影响范围和责任。</p>
+      <p>以后如果我的判断发生变化，我会在版本记录中补充，而不会回头改写原始气泡。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>核验与观点边界</summary>
+    <div class="note-body">
+      <ul>
+        <li><span class="note-label">已核验</span>开场讨论的安全事件有 OpenAI 官方披露支持：模型在 ExploitGym 评测中突破研究环境的网络限制，并进一步影响 Hugging Face 的生产基础设施。</li>
+        <li><span class="note-label">存档者确认</span>本期对话对象为腾讯元宝，底层使用混元 + DeepSeek 路由；本页未附独立的外部技术证明。</li>
+        <li><span class="note-label">观点与推断</span>关于“意识”“真正理解”“AGI 是否需要后悔”“世界模型能否降低奖励黑客”等表述，是对话中的判断和类比，不应直接视为学术共识。</li>
+      </ul>
+      <p>参考：<a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" rel="noopener noreferrer">OpenAI 官方事件说明</a>；<a href="https://arxiv.org/abs/2605.11086" rel="noopener noreferrer">ExploitGym 论文</a>。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>版本记录</summary>
+    <div class="note-body">
+      <ul>
+        <li><strong>2026-07-30：</strong>第 01 期首次建立公开存档。</li>
+        <li><strong>2026-07-31：</strong>增加对话元数据、编者后记、核验边界、SEO 信息和移动端适配；本次未改写原始对话气泡。</li>
+      </ul>
+    </div>
+  </details>
+</section>
 
 <div class="footer">
   <p>对话实录 · 2026年7月30日 · 腾讯元宝（Yuanbao）</p>
