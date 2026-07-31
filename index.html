@@ -49,8 +49,9 @@
     .sidebar-section { margin-top:30px; padding-top:22px; border-top:1px solid #d2d2d2; }
     .sidebar-title { margin:0 0 11px; color:#555; font-size:12px; font-weight:750; letter-spacing:.08em; text-transform:uppercase; }
     .tag-cloud { display:flex; flex-wrap:wrap; gap:7px; }
-    .tag-filter { border:1px solid #d5d8d6; border-radius:999px; padding:5px 10px; color:#56605a; background:#f6f7f6; font:inherit; font-size:12px; cursor:pointer; }
+    .tag-filter { display:inline-flex; align-items:center; border:1px solid #d5d8d6; border-radius:999px; padding:5px 10px; color:#56605a; background:#f6f7f6; font:inherit; font-size:12px; line-height:1.7; text-decoration:none; cursor:pointer; }
     .tag-filter:hover, .tag-filter[aria-pressed="true"] { border-color:#a9ddbf; color:var(--accent-dark); background:var(--accent-soft); }
+    .about-tab { margin-left:auto; border-color:#b9c0bc; font-weight:700; }
     .subscribe-link { color:var(--accent-dark); font-size:13px; font-weight:650; text-decoration:none; }
     .subscribe-link:hover { text-decoration:underline; }
     .archive-main { min-width:0; }
@@ -75,6 +76,7 @@
     .secondary-link:hover { text-decoration:underline; }
     .empty-state { padding:34px 24px; border:1px dashed #c9c9c9; border-radius:12px; color:var(--muted); background:rgba(255,255,255,.45); text-align:center; }
     footer { width:min(1080px,calc(100% - 48px)); margin:0 auto 34px; padding-top:20px; border-top:1px solid #d2d2d2; color:#858585; font-size:12px; text-align:center; }
+    footer a { color:#626b66; }
     .giscus-metadata-loader { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
     button:focus-visible, a:focus-visible { outline:3px solid rgba(7,193,96,.3); outline-offset:3px; }
     @media (max-width:760px) {
@@ -84,6 +86,7 @@
       .lead { max-width:620px; }
       .sidebar-section { margin-top:22px; padding-top:18px; }
       .issue-card { padding:21px 18px; }
+      .about-tab { margin-left:0; }
       footer { width:calc(100% - 32px); }
     }
     @media (max-width:480px) {
@@ -125,6 +128,7 @@
     <a class="site-name" href="./">AI 深度对话存档</a>
     <nav class="site-nav" aria-label="站点导航">
       <a href="#archive">全部对话</a>
+      <a href="about/">关于本站</a>
       <a href="feed.xml">RSS 订阅</a>
     </nav>
   </div>
@@ -148,6 +152,7 @@
         <button class="tag-filter" type="button" data-filter="Agent身份" aria-pressed="false">Agent 身份</button>
         <button class="tag-filter" type="button" data-filter="记忆连续性" aria-pressed="false">记忆连续性</button>
         <button class="tag-filter" type="button" data-filter="数字伦理" aria-pressed="false">数字伦理</button>
+        <a class="tag-filter about-tab" href="about/">关于本站</a>
       </div>
     </section>
 
@@ -201,7 +206,7 @@
   </section>
 </main>
 
-<footer>本存档中的 AI 回答不等于已验证事实，也不代表学术共识。</footer>
+<footer>本存档中的 AI 回答不等于已验证事实，也不代表学术共识。 · <a href="about/">关于本站</a></footer>
 
 <div class="giscus-metadata-loader" aria-hidden="true">
   <script src="https://giscus.app/client.js"

@@ -61,6 +61,7 @@
 - [`sitemap.xml`](sitemap.xml)：公开页面索引；
 - [`robots.txt`](robots.txt)：爬虫访问规则与 sitemap 地址；
 - [`feed.xml`](feed.xml)：RSS 2.0 更新订阅。
+- [`about/index.html`](about/index.html)：站点缘起、收录标准、编者与免责声明。
 
 新增一期时，需要同步更新首页索引、RSS、sitemap 和该期页面的结构化数据。
 
