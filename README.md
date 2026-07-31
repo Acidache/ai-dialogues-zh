@@ -9,6 +9,7 @@
 - 对话日期：2026-07-30
 - 关键词：AI 安全、AI 对齐、奖励黑客、目标错配、世界模型、AGI、韧性工程
 - [阅读微信风格完整对话](dialogues/2026-07-30-ai-control-world-model-agi/index.html)
+- [参与公开讨论](https://github.com/Acidache/ai-dialogues-zh/discussions)
 
 ### 为什么值得保存
 
@@ -46,6 +47,12 @@
 
 - [OpenAI：模型评估期间与 Hugging Face 共同处置的安全事件](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
 - [ExploitGym 论文（arXiv:2605.11086）](https://arxiv.org/abs/2605.11086)
+
+## 交流与评论
+
+每篇对话页面底部嵌入由 [giscus](https://giscus.app/zh-CN) 提供的评论区，评论保存在本仓库的 GitHub Discussions 中。读者可以查看留言和回复；发表内容时需要使用 GitHub 账号登录并授权 giscus 代表本人提交评论。
+
+评论区会加载来自 `giscus.app` 的脚本，不含广告。禁用 JavaScript 时仍可通过仓库的 [Discussions 页面](https://github.com/Acidache/ai-dialogues-zh/discussions)参与讨论。
 
 ## 使用说明
 

@@ -192,6 +192,48 @@
     border-radius: 10px;
     margin: 2px 3px;
   }
+  .discussion-section {
+    max-width: 720px;
+    margin: 28px auto 56px;
+    padding: 0 18px;
+  }
+  .discussion-card {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  }
+  .discussion-card h2 {
+    margin: 0 0 8px;
+    color: #111;
+    font-size: 21px;
+    line-height: 1.35;
+  }
+  .discussion-intro {
+    margin: 0 0 20px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .discussion-note {
+    margin: 16px 0 0;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .discussion-note a {
+    color: #57606a;
+  }
+  @media (max-width: 480px) {
+    .discussion-section {
+      margin-top: 20px;
+      padding: 0 12px;
+    }
+    .discussion-card {
+      padding: 20px 14px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -538,5 +580,35 @@
 
 </div>
 </div>
+
+<section class="discussion-section" aria-labelledby="discussion-title">
+  <div class="discussion-card">
+    <h2 id="discussion-title">继续这场对话</h2>
+    <p class="discussion-intro">你认同哪一部分？哪一个判断值得反驳或补充？欢迎留下观点，也可以回复其他读者。首次留言需要使用 GitHub 账号登录。</p>
+    <script src="https://giscus.app/client.js"
+            data-repo="Acidache/ai-dialogues-zh"
+            data-repo-id="R_kgDOToycww"
+            data-category="General"
+            data-category-id="DIC_kwDOToycw84DCW3P"
+            data-mapping="pathname"
+            data-strict="1"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="light"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>
+      <p class="discussion-note">需要启用 JavaScript 才能显示评论区。你也可以直接前往
+        <a href="https://github.com/Acidache/ai-dialogues-zh/discussions">GitHub Discussions</a>
+        参与讨论。
+      </p>
+    </noscript>
+    <p class="discussion-note">评论由 <a href="https://giscus.app/zh-CN" rel="noopener noreferrer">giscus</a> 与 GitHub Discussions 提供；登录和评论遵循 GitHub 的隐私政策与社区规则。</p>
+  </div>
+</section>
 </body>
 </html>
