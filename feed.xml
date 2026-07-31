@@ -8,6 +8,18 @@
     <lastBuildDate>Fri, 31 Jul 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://acidache.github.io/ai-dialogues-zh/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>第 03 期：隐私推理、盲译官协议与“防用”哲学</title>
+      <link>https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-private-inference-blind-interpreter-control/</link>
+      <guid isPermaLink="true">https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-private-inference-blind-interpreter-control/</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[从隐私保护推理出发，讨论 FHE、TEE、动态 IR、盲译官协议，以及当“防看懂”失效后如何限制 AI 的现实行动能力。]]></description>
+      <category>隐私推理</category>
+      <category>盲译官协议</category>
+      <category>FHE</category>
+      <category>AI 安全</category>
+      <category>控制权</category>
+    </item>
+    <item>
       <title>第 02 期：换了大模型，它还是原来的 AI Agent 吗？</title>
       <link>https://acidache.github.io/ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/</link>
       <guid isPermaLink="true">https://acidache.github.io/ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/</guid>
