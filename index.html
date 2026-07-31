@@ -51,9 +51,10 @@
     .tag-cloud { display:flex; flex-wrap:wrap; gap:7px; }
     .tag-filter { display:inline-flex; align-items:center; border:1px solid #d5d8d6; border-radius:999px; padding:5px 10px; color:#56605a; background:#f6f7f6; font:inherit; font-size:12px; line-height:1.7; text-decoration:none; cursor:pointer; }
     .tag-filter:hover, .tag-filter[aria-pressed="true"] { border-color:#a9ddbf; color:var(--accent-dark); background:var(--accent-soft); }
-    .about-tab { margin-left:auto; border-color:#b9c0bc; font-weight:700; }
     .subscribe-link { color:var(--accent-dark); font-size:13px; font-weight:650; text-decoration:none; }
     .subscribe-link:hover { text-decoration:underline; }
+    .about-link { display:inline-flex; align-items:center; color:#47514b; font-size:13px; font-weight:700; text-decoration:none; }
+    .about-link:hover { color:var(--accent-dark); text-decoration:underline; }
     .archive-main { min-width:0; }
     .archive-heading { display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:16px; }
     .archive-heading h2 { margin:0; font-size:21px; }
@@ -86,7 +87,6 @@
       .lead { max-width:620px; }
       .sidebar-section { margin-top:22px; padding-top:18px; }
       .issue-card { padding:21px 18px; }
-      .about-tab { margin-left:0; }
       footer { width:calc(100% - 32px); }
     }
     @media (max-width:480px) {
@@ -152,13 +152,17 @@
         <button class="tag-filter" type="button" data-filter="Agent身份" aria-pressed="false">Agent 身份</button>
         <button class="tag-filter" type="button" data-filter="记忆连续性" aria-pressed="false">记忆连续性</button>
         <button class="tag-filter" type="button" data-filter="数字伦理" aria-pressed="false">数字伦理</button>
-        <a class="tag-filter about-tab" href="about/">关于本站</a>
       </div>
     </section>
 
     <section class="sidebar-section" aria-labelledby="subscribe-title">
       <h2 class="sidebar-title" id="subscribe-title">持续订阅</h2>
       <a class="subscribe-link" href="feed.xml">通过 RSS 获取新一期 →</a>
+    </section>
+
+    <section class="sidebar-section" aria-labelledby="about-link-title">
+      <h2 class="sidebar-title" id="about-link-title">站点</h2>
+      <a class="about-link" href="about/">关于本站 →</a>
     </section>
   </aside>
 
