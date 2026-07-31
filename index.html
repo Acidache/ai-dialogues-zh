@@ -108,6 +108,12 @@
     "hasPart": [
       {
         "@type": "Article",
+        "headline": "隐私推理、盲译官协议与“防用”哲学",
+        "datePublished": "2026-07-31",
+        "url": "https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-private-inference-blind-interpreter-control/"
+      },
+      {
+        "@type": "Article",
         "headline": "AI“失控”、奖励机制、世界模型与 AGI",
         "datePublished": "2026-07-30",
         "url": "https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/"
@@ -152,6 +158,9 @@
         <button class="tag-filter" type="button" data-filter="Agent身份" aria-pressed="false">Agent 身份</button>
         <button class="tag-filter" type="button" data-filter="记忆连续性" aria-pressed="false">记忆连续性</button>
         <button class="tag-filter" type="button" data-filter="数字伦理" aria-pressed="false">数字伦理</button>
+        <button class="tag-filter" type="button" data-filter="隐私推理" aria-pressed="false">隐私推理</button>
+        <button class="tag-filter" type="button" data-filter="IR/FHE" aria-pressed="false">IR / FHE</button>
+        <button class="tag-filter" type="button" data-filter="控制权" aria-pressed="false">控制权</button>
       </div>
     </section>
 
@@ -169,10 +178,26 @@
   <section class="archive-main" id="archive" aria-labelledby="issue-list-title">
     <div class="archive-heading">
       <h2 id="issue-list-title">全部对话</h2>
-      <span class="archive-count" id="archive-count">共 2 期</span>
+      <span class="archive-count" id="archive-count">共 3 期</span>
     </div>
 
     <div class="issue-list">
+      <article class="issue-card" data-tags="隐私推理 IR/FHE AI安全 控制权">
+        <div class="issue-meta">
+          <span>第 03 期 · 2026 年 7 月 · 腾讯元宝</span>
+          <span class="discussion-count" id="discussion-count-03" aria-live="polite">0 条留言</span>
+        </div>
+        <h3 class="issue-title"><a href="dialogues/2026-07-private-inference-blind-interpreter-control/">隐私推理、盲译官协议与“防用”哲学</a></h3>
+        <p class="issue-summary">从“让在线大模型干活，却不看见真实 Prompt”的设想出发，讨论 FHE、TEE、动态 IR 与盲译官协议，最终转向更根本的问题：当保密可能失效时，能否限制 AI 将知识用于现实行动。</p>
+        <div class="issue-tags" aria-label="主题标签">
+          <span>隐私推理</span><span>盲译官协议</span><span>IR / FHE</span><span>AI 安全</span><span>控制权</span>
+        </div>
+        <div class="issue-actions">
+          <a class="primary-link" href="dialogues/2026-07-private-inference-blind-interpreter-control/">阅读完整对话</a>
+          <a class="secondary-link" href="dialogues/2026-07-private-inference-blind-interpreter-control/#discussion">查看留言与参与讨论 →</a>
+        </div>
+      </article>
+
       <article class="issue-card" data-tags="AI安全 AI对齐 奖励黑客 世界模型 AGI">
         <div class="issue-meta">
           <span>第 01 期 · 2026 年 7 月 · 腾讯元宝</span>
@@ -248,10 +273,29 @@
     async>
   </script>
 </div>
+<div class="giscus-metadata-loader" aria-hidden="true">
+  <script src="https://giscus.app/client.js"
+    data-repo="Acidache/ai-dialogues-zh"
+    data-repo-id="R_kgDOToycww"
+    data-category="General"
+    data-category-id="DIC_kwDOToycw84DCW3P"
+    data-mapping="specific"
+    data-term="ai-dialogues-zh/dialogues/2026-07-private-inference-blind-interpreter-control/"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>
 <script>
   (() => {
     const count01 = document.getElementById("discussion-count-01");
     const count02 = document.getElementById("discussion-count-02");
+    const count03 = document.getElementById("discussion-count-03");
     const cards = [...document.querySelectorAll(".issue-card")];
     const filterButtons = document.querySelectorAll(".tag-filter");
     const archiveCount = document.getElementById("archive-count");
@@ -261,7 +305,9 @@
       if (event.origin !== "https://giscus.app") return;
       const discussion = event.data?.giscus?.discussion;
       if (!discussion) return;
-      const target = discussion.title?.includes("换了大模型") ? count02 : count01;
+      let target = count01;
+      if (discussion.title?.includes("换了大模型")) target = count02;
+      if (discussion.title?.includes("隐私推理") || discussion.title?.includes("盲译官")) target = count03;
       target.textContent = `${Number(discussion.totalCommentCount || 0)} 条留言`;
     });
 
