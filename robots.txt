@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://acidache.github.io/ai-dialogues-zh/sitemap.xml
+Sitemap: https://dialogues.goushoen.com/sitemap.xml
