@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI 深度对话存档</title>
-    <link>https://acidache.github.io/ai-dialogues-zh/</link>
+    <link>https://dialogues.goushoen.com/</link>
     <description>记录值得被搜索、重读与继续质疑的人机对话。</description>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 31 Jul 2026 00:00:00 +0800</lastBuildDate>
-    <atom:link href="https://acidache.github.io/ai-dialogues-zh/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://dialogues.goushoen.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>第 04 期：颜色是真实存在的吗？</title>
-      <link>https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-color-perception-civilization/</link>
-      <guid isPermaLink="true">https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-color-perception-civilization/</guid>
+      <link>https://dialogues.goushoen.com/dialogues/2026-07-color-perception-civilization/</link>
+      <guid isPermaLink="true">https://dialogues.goushoen.com/dialogues/2026-07-color-perception-civilization/</guid>
       <pubDate>Fri, 31 Jul 2026 00:00:00 +0800</pubDate>
       <description><![CDATA[从红蓝配色出发，追问颜色是否真实存在，并一路讨论感知建构、心身关系、时间体验与文明的增长冲动。]]></description>
       <category>认知与感知</category>
@@ -18,8 +18,8 @@
     </item>
     <item>
       <title>第 03 期：密码学能让 AI 更安全吗？</title>
-      <link>https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-private-inference-blind-interpreter-control/</link>
-      <guid isPermaLink="true">https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-private-inference-blind-interpreter-control/</guid>
+      <link>https://dialogues.goushoen.com/dialogues/2026-07-private-inference-blind-interpreter-control/</link>
+      <guid isPermaLink="true">https://dialogues.goushoen.com/dialogues/2026-07-private-inference-blind-interpreter-control/</guid>
       <pubDate>Fri, 31 Jul 2026 00:00:00 +0800</pubDate>
       <description><![CDATA[从隐私保护推理出发，讨论 FHE、TEE、动态 IR、盲译官协议，以及当“防看懂”失效后如何限制 AI 的现实行动能力。]]></description>
       <category>隐私推理</category>
@@ -30,8 +30,8 @@
     </item>
     <item>
       <title>第 02 期：换了大模型，它还是原来的 AI Agent 吗？</title>
-      <link>https://acidache.github.io/ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/</link>
-      <guid isPermaLink="true">https://acidache.github.io/ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/</guid>
+      <link>https://dialogues.goushoen.com/dialogues/2026-04-ai-agent-identity-memory-continuity/</link>
+      <guid isPermaLink="true">https://dialogues.goushoen.com/dialogues/2026-04-ai-agent-identity-memory-continuity/</guid>
       <pubDate>Fri, 31 Jul 2026 00:00:00 +0800</pubDate>
       <description><![CDATA[从更换底层模型后的违和感出发，讨论人格文件、记忆连续性、模型载体、关系权力，以及我们该如何面对可能被复制和迁移的数字伙伴。]]></description>
       <category>AI Agent 身份</category>
@@ -41,8 +41,8 @@
     </item>
     <item>
       <title>第 01 期：AI 为什么会失控？</title>
-      <link>https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/</link>
-      <guid isPermaLink="true">https://acidache.github.io/ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/</guid>
+      <link>https://dialogues.goushoen.com/dialogues/2026-07-30-ai-control-world-model-agi/</link>
+      <guid isPermaLink="true">https://dialogues.goushoen.com/dialogues/2026-07-30-ai-control-world-model-agi/</guid>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0800</pubDate>
       <description><![CDATA[从一次 AI Agent 安全事件出发，追问“得分越高越好”的训练范式为何难以映射真实社会，以及世界模型是否真正改变了价值选择问题。]]></description>
       <category>AI 安全</category>
