@@ -69,10 +69,17 @@ jobs:
             }
           }
 
+          const counts = { byTerm, byPage };
+          const current = fs.existsSync("assets/discussion-counts.json")
+            ? JSON.parse(fs.readFileSync("assets/discussion-counts.json", "utf8"))
+            : {};
+          if (JSON.stringify({ byTerm: current.byTerm, byPage: current.byPage }) === JSON.stringify(counts)) {
+            process.exit(0);
+          }
+
           const output = {
             updatedAt: new Date().toISOString(),
-            byTerm,
-            byPage
+            ...counts
           };
           fs.writeFileSync(
             "assets/discussion-counts.json",

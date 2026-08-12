@@ -269,78 +269,6 @@
 
 <footer>本存档中的 AI 回答不等于已验证事实，也不代表学术共识。 · <a href="about/">关于本站</a></footer>
 
-<div class="giscus-metadata-loader" aria-hidden="true">
-  <script src="https://giscus.app/client.js"
-    data-repo="Acidache/ai-dialogues-zh"
-    data-repo-id="R_kgDOToycww"
-    data-category="General"
-    data-category-id="DIC_kwDOToycw84DCW3P"
-    data-mapping="specific"
-    data-term="ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/"
-    data-strict="1"
-    data-reactions-enabled="1"
-    data-emit-metadata="1"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>
-<div class="giscus-metadata-loader" aria-hidden="true">
-  <script src="https://giscus.app/client.js"
-    data-repo="Acidache/ai-dialogues-zh"
-    data-repo-id="R_kgDOToycww"
-    data-category="General"
-    data-category-id="DIC_kwDOToycw84DCW3P"
-    data-mapping="specific"
-    data-term="ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/"
-    data-strict="1"
-    data-reactions-enabled="1"
-    data-emit-metadata="1"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>
-<div class="giscus-metadata-loader" aria-hidden="true">
-  <script src="https://giscus.app/client.js"
-    data-repo="Acidache/ai-dialogues-zh"
-    data-repo-id="R_kgDOToycww"
-    data-category="General"
-    data-category-id="DIC_kwDOToycw84DCW3P"
-    data-mapping="specific"
-    data-term="ai-dialogues-zh/dialogues/2026-07-private-inference-blind-interpreter-control/"
-    data-strict="1"
-    data-reactions-enabled="1"
-    data-emit-metadata="1"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>
-<div class="giscus-metadata-loader" aria-hidden="true">
-  <script src="https://giscus.app/client.js"
-    data-repo="Acidache/ai-dialogues-zh"
-    data-repo-id="R_kgDOToycww"
-    data-category="General"
-    data-category-id="DIC_kwDOToycw84DCW3P"
-    data-mapping="specific"
-    data-term="ai-dialogues-zh/dialogues/2026-07-color-perception-civilization/"
-    data-strict="1"
-    data-reactions-enabled="1"
-    data-emit-metadata="1"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>
 <script>
   (() => {
     const count01 = document.getElementById("discussion-count-01");
@@ -369,17 +297,6 @@
         });
       })
       .catch(() => {});
-
-    window.addEventListener("message", (event) => {
-      if (event.origin !== "https://giscus.app") return;
-      const discussion = event.data?.giscus?.discussion;
-      if (!discussion) return;
-      let target = count01;
-      if (discussion.title?.includes("换了大模型")) target = count02;
-      if (discussion.title?.includes("密码学") || discussion.title?.includes("隐私推理") || discussion.title?.includes("盲译官")) target = count03;
-      if (discussion.title?.includes("颜色") || discussion.title?.includes("三原色") || discussion.title?.includes("文明底层逻辑")) target = count04;
-      target.textContent = `${Number(discussion.totalCommentCount || 0)} 条留言`;
-    });
 
     filterButtons.forEach((button) => {
       button.addEventListener("click", () => {
