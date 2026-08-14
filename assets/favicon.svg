@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">goushoen favicon</title>
+  <g fill="none" stroke="#171817" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M91 77H67C42 77 24 63 24 42S43 7 69 7s46 14 46 35c0 12-5 22-14 30"/>
+    <path d="M91 83H66c-26 0-45 15-45 36s20 35 48 35 49-15 49-36c0-12-5-23-15-30"/>
+  </g>
+  <circle cx="106" cy="80" r="11" fill="#7D8D5A"/>
+</svg>

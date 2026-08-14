@@ -7,6 +7,8 @@
   <meta name="keywords" content="AI对话,AI失控,AI安全,AI对齐,奖励黑客,世界模型,AGI,腾讯元宝">
   <link rel="canonical" href="https://dialogues.goushoen.com/">
   <link rel="alternate" type="application/rss+xml" title="AI 深度对话存档 RSS" href="https://dialogues.goushoen.com/feed.xml">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta property="og:title" content="AI 深度对话存档">
   <meta property="og:description" content="记录值得被搜索、重读与继续质疑的人机对话。">
   <meta property="og:type" content="website">
@@ -37,7 +39,8 @@
     a { color:inherit; }
     .site-bar { min-height:52px; display:flex; align-items:center; background:var(--header); color:#fff; }
     .site-bar-inner { width:min(1080px,100%); margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .site-name { font-size:15px; font-weight:650; text-decoration:none; }
+    .site-name { display:inline-flex; align-items:center; gap:9px; font-size:15px; font-weight:650; text-decoration:none; }
+    .site-logo { width:30px; height:30px; flex:none; }
     .site-nav { display:flex; gap:18px; font-size:13px; }
     .site-nav a { color:#d8d8d8; text-decoration:none; }
     .site-nav a:hover { color:#fff; }
@@ -141,7 +144,10 @@
 <body>
 <header class="site-bar">
   <div class="site-bar-inner">
-    <a class="site-name" href="./">AI 深度对话存档</a>
+    <a class="site-name" href="./">
+      <img class="site-logo" src="assets/goushoen-mark-dark.svg" width="30" height="30" alt="">
+      <span>AI 深度对话存档</span>
+    </a>
     <nav class="site-nav" aria-label="站点导航">
       <a href="#archive">全部对话</a>
       <a href="about/">关于本站</a>
