@@ -39,8 +39,10 @@
     a { color:inherit; }
     .site-bar { min-height:52px; display:flex; align-items:center; background:var(--header); color:#fff; }
     .site-bar-inner { width:min(1080px,100%); margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .site-name { display:inline-flex; align-items:center; gap:9px; font-size:15px; font-weight:650; text-decoration:none; }
-    .site-logo { width:30px; height:30px; flex:none; }
+    .site-name { display:inline-flex; align-items:center; gap:12px; min-width:0; text-decoration:none; }
+    .site-logo { display:block; width:116px; height:auto; flex:none; }
+    .site-divider { width:1px; height:22px; flex:none; background:rgba(255,255,255,.24); }
+    .site-title { overflow:hidden; font-size:15px; font-weight:650; text-overflow:ellipsis; white-space:nowrap; }
     .site-nav { display:flex; gap:18px; font-size:13px; }
     .site-nav a { color:#d8d8d8; text-decoration:none; }
     .site-nav a:hover { color:#fff; }
@@ -97,6 +99,8 @@
       footer { width:calc(100% - 32px); }
     }
     @media (max-width:480px) {
+      .site-logo { width:104px; }
+      .site-divider, .site-title { display:none; }
       .site-nav a:first-child { display:none; }
       .archive-heading { align-items:center; }
       .issue-title { font-size:22px; }
@@ -145,8 +149,9 @@
 <header class="site-bar">
   <div class="site-bar-inner">
     <a class="site-name" href="./">
-      <img class="site-logo" src="assets/goushoen-mark-dark.svg" width="30" height="30" alt="">
-      <span>AI 深度对话存档</span>
+      <img class="site-logo" src="assets/goushoen-logo-on-dark.svg" width="116" height="24" alt="goushoen">
+      <span class="site-divider" aria-hidden="true"></span>
+      <span class="site-title">AI 深度对话存档</span>
     </a>
     <nav class="site-nav" aria-label="站点导航">
       <a href="#archive">全部对话</a>
