@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="160" viewBox="0 0 760 160" role="img" aria-labelledby="title desc">
+  <title id="title">goushoen logo for dark surfaces</title>
+  <desc id="desc">Transparent open double-loop g mark and goushoen wordmark for dark surfaces.</desc>
+  <g fill="none" stroke="#F5F4EF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M88 78H66C42 78 25 64 25 43S43 8 68 8s45 14 45 35c0 12-5 22-14 30"/>
+    <path d="M88 82H65c-25 0-43 15-43 36s19 35 46 35 47-15 47-36c0-12-5-23-14-30"/>
+  </g>
+  <circle cx="104" cy="80" r="8" fill="#9AAC71"/>
+  <text x="155" y="109" fill="#F5F4EF" font-family="Avenir Next, Avenir, Helvetica Neue, Arial, sans-serif" font-size="64" font-weight="400" letter-spacing="5">goushoen</text>
+</svg>
