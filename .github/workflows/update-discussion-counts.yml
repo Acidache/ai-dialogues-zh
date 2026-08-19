@@ -27,7 +27,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api graphql -f query='
+          query='
             query {
               repository(owner: "Acidache", name: "ai-dialogues-zh") {
                 discussions(first: 100) {
@@ -43,7 +43,22 @@ jobs:
                 }
               }
             }
-          ' > /tmp/discussions.json
+          '
+
+          for attempt in 1 2 3 4; do
+            if gh api graphql -f query="$query" > /tmp/discussions.json; then
+              break
+            fi
+
+            if [ "$attempt" -eq 4 ]; then
+              echo "GitHub GraphQL API failed after $attempt attempts." >&2
+              exit 1
+            fi
+
+            delay=$((attempt * 10))
+            echo "GitHub GraphQL API request failed; retrying in ${delay}s (attempt $((attempt + 1))/4)." >&2
+            sleep "$delay"
+          done
 
       - name: Build public count index
         run: |
