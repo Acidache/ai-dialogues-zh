@@ -119,6 +119,12 @@
     "hasPart": [
       {
         "@type": "Article",
+        "headline": "AI 的“集成电路时刻”何时到来？",
+        "datePublished": "2026-08-19",
+        "url": "https://dialogues.goushoen.com/dialogues/2026-08-19-ai-parameter-scaling-integrated-circuit-moment/"
+      },
+      {
+        "@type": "Article",
         "headline": "颜色是真实存在的吗？",
         "datePublished": "2026-07-31",
         "url": "https://dialogues.goushoen.com/dialogues/2026-07-color-perception-civilization/"
@@ -193,7 +199,7 @@
   <section class="archive-main" id="archive" aria-labelledby="issue-list-title">
     <div class="archive-heading">
       <h2 id="issue-list-title">全部对话</h2>
-      <span class="archive-count" id="archive-count">共 4 期</span>
+      <span class="archive-count" id="archive-count">共 5 期</span>
     </div>
 
     <div class="issue-list">
@@ -272,6 +278,23 @@
           <a class="secondary-link" href="dialogues/2026-07-color-perception-civilization/#discussion">查看留言与参与讨论 →</a>
         </div>
       </article>
+
+      <article class="issue-card" data-tags="技术与社会">
+        <div class="issue-meta">
+          <span>第 05 期 · 2026 年 8 月 · 腾讯元宝</span>
+          <span class="discussion-count" id="discussion-count-05" aria-live="polite">0 条留言</span>
+        </div>
+        <a class="issue-cover-link" href="dialogues/2026-08-19-ai-parameter-scaling-integrated-circuit-moment/" aria-label="阅读第 05 期：AI 的集成电路时刻何时到来？">
+          <img src="assets/issue-05-cover.jpg" alt="第 05 期封面：AI 的集成电路时刻何时到来？" width="1200" height="684" loading="lazy">
+        </a>
+        <h3 class="issue-title visually-hidden">AI 的“集成电路时刻”何时到来？</h3>
+        <p class="issue-summary">从参数量与显存的区别出发，把模型规模类比为晶体管扩张，继而追问 Mamba、存内计算与新型器件能否带来 AI 的下一个架构拐点。</p>
+        <div class="issue-tags" aria-label="主题标签"><span>技术与社会</span></div>
+        <div class="issue-actions">
+          <a class="primary-link" href="dialogues/2026-08-19-ai-parameter-scaling-integrated-circuit-moment/">阅读完整对话</a>
+          <a class="secondary-link" href="dialogues/2026-08-19-ai-parameter-scaling-integrated-circuit-moment/#discussion">查看留言与参与讨论 →</a>
+        </div>
+      </article>
     </div>
 
     <p class="empty-state" id="empty-state" hidden>当前还没有这个主题的对话。</p>
@@ -286,6 +309,7 @@
     const count02 = document.getElementById("discussion-count-02");
     const count03 = document.getElementById("discussion-count-03");
     const count04 = document.getElementById("discussion-count-04");
+    const count05 = document.getElementById("discussion-count-05");
     const cards = [...document.querySelectorAll(".issue-card")];
     const filterButtons = document.querySelectorAll(".tag-filter");
     const archiveCount = document.getElementById("archive-count");
@@ -294,7 +318,8 @@
       "ai-dialogues-zh/dialogues/2026-07-30-ai-control-world-model-agi/": count01,
       "ai-dialogues-zh/dialogues/2026-04-ai-agent-identity-memory-continuity/": count02,
       "ai-dialogues-zh/dialogues/2026-07-private-inference-blind-interpreter-control/": count03,
-      "ai-dialogues-zh/dialogues/2026-07-color-perception-civilization/": count04
+      "ai-dialogues-zh/dialogues/2026-07-color-perception-civilization/": count04,
+      "ai-dialogues-zh/dialogues/2026-08-19-ai-parameter-scaling-integrated-circuit-moment/": count05
     };
 
     fetch("assets/discussion-counts.json", { cache: "no-store" })

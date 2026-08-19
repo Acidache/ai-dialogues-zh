@@ -5,8 +5,16 @@
     <link>https://dialogues.goushoen.com/</link>
     <description>记录值得被搜索、重读与继续质疑的人机对话。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 31 Jul 2026 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://dialogues.goushoen.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>第 05 期：AI 的“集成电路时刻”何时到来？</title>
+      <link>https://dialogues.goushoen.com/dialogues/2026-08-19-ai-parameter-scaling-integrated-circuit-moment/</link>
+      <guid isPermaLink="true">https://dialogues.goushoen.com/dialogues/2026-08-19-ai-parameter-scaling-integrated-circuit-moment/</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0800</pubDate>
+      <description><![CDATA[从参数量与显存的区别出发，追问规模扩张的边界、存内计算的产业化，以及 AI 的“集成电路时刻”何时到来。]]></description>
+      <category>技术与社会</category>
+    </item>
     <item>
       <title>第 04 期：颜色是真实存在的吗？</title>
       <link>https://dialogues.goushoen.com/dialogues/2026-07-color-perception-civilization/</link>
